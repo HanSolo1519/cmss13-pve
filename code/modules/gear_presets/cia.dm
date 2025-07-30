@@ -304,5 +304,6 @@
 /datum/equipment_preset/cia/ai/upp_civilian/smg
 	name = "CIA Agent SMG (UPP Civilian Clothing, AI)"
 
+/datum/equipment_preset/cia/ai/upp_civilian/smg/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/m39/full, WEAR_WAIST)
 
