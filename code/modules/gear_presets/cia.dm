@@ -303,8 +303,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/camera(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/cia/ai/upp_civilian/smg
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39/elite, WEAR_J_STORE)
+	name = "CIA Agent SMG (UPP Civilian Clothing, AI)"
+
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39/elite, WEAR_J_STORE)
 
