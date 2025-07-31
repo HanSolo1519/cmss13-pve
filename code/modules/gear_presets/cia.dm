@@ -259,7 +259,7 @@
 	minimap_icon = "cia_ia"
 	idtype = /obj/item/card/id/adaptive
 
-/datum/equipment_preset/cia/analyst/load_gear(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/cia/ai/upp_civilian/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()
 
 	//Give them a random piece of civvie clothing.
@@ -282,9 +282,9 @@
 		/obj/item/clothing/suit/storage/jacket/marine/vest/grey,
 	)
 
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/cia, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new random_outfit, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new random_suit, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/cia(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new random_outfit(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new random_suit(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable/liaison, WEAR_BACK)
@@ -305,7 +305,9 @@
 	name = "CIA Agent SMG (UPP Civilian Clothing, AI)"
 
 /datum/equipment_preset/cia/ai/upp_civilian/smg/load_gear(mob/living/carbon/human/new_human, client/mob_client)
-	var/random_gun = rand(1,3)
+	. = ..()
+
+	var/random_gun= rand(1,3)
 	switch(random_gun)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/bizon, WEAR_J_STORE)
@@ -323,9 +325,15 @@
 
 /datum/equipment_preset/cia/ai/operative
 	name = "CIA Agent Operative (AI)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	rank = "Intelligence Operative"
+	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
+	role_comm_title = PAY_SHORT_CIV
+	minimap_background = "background_civillian"
+	minimap_icon = "cia_ia"
+	idtype = /obj/item/card/id/adaptive
 
 /datum/equipment_preset/cia/ai/operative/load_gear(mob/living/carbon/human/new_human, client/mob_client)
-	. = ..()
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange, WEAR_IN_HELMET)
