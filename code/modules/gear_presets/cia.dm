@@ -307,8 +307,8 @@
 	name = "CIA Agent SMG (UPP Civilian Clothing, AI)"
 
 /datum/equipment_preset/cia/ai/upp_civilian/smg/load_gear(mob/living/carbon/human/new_human, client/mob_client)
-	var/random_gun= rand(1,3)
-	switch(random_jacket)
+	var/random_gun = rand(1,3)
+	switch(random_gun)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/bizon, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon, WEAR_IN_BACK)
