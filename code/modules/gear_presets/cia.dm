@@ -259,7 +259,7 @@
 	minimap_icon = "cia_ia"
 	idtype = /obj/item/card/id/adaptive
 
-/datum/equipment_preset/cia/ai/upp_civilian/load_gear(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/cia/analyst/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()
 
 	//Give them a random piece of civvie clothing.
@@ -305,7 +305,7 @@
 	name = "CIA Agent SMG (UPP Civilian Clothing, AI)"
 
 /datum/equipment_preset/cia/ai/upp_civilian/smg/load_gear(mob/living/carbon/human/new_human, client/mob_client)
-	var/(random_gun) = rand(1,3)
+	var/random_gun = rand(1,3)
 	switch(random_gun)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/bizon, WEAR_J_STORE)
