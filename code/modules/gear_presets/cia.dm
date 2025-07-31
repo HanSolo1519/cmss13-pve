@@ -333,6 +333,7 @@
 	name = "CIA AI (Operative)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	rank = "Intelligence Operative"
+	assignment = "Intelligence Operative"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	role_comm_title = PAY_SHORT_CIV
 	minimap_background = "background_civillian"
