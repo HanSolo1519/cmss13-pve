@@ -13,7 +13,7 @@
 
 /datum/human_ai_equipment_preset/cia/undercover
 	name = "CIA Operative"
-	desc = "Armed with an M39B/2 submachinegun and an M1911, carries a tactical medical pouch."
+	desc = "Armed with a suppressed M46C and M1911, carries a tactical medical pouch."
 	path = /datum/equipment_preset/cia/ai/operative
 
 
