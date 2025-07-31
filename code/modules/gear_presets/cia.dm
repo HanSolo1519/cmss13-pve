@@ -249,7 +249,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/cia, WEAR_IN_BACK)
 
 /datum/equipment_preset/cia/ai/upp_civilian
-	name = "CIA Agent (UPP Civilian Clothing, AI)"
+	name = "CIA AI (UPP Civilian Clothing, AI)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	rank = "Intelligence Analyst"
 	assignment = "Grazhdanin"
@@ -293,7 +293,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m1911/socom/equipped, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/m1911(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/m1911(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/health/ceramic_plate, WEAR_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/camera, WEAR_IN_BACK)
@@ -302,29 +305,33 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_BACK)
 
 /datum/equipment_preset/cia/ai/upp_civilian/smg
-	name = "CIA Agent SMG (UPP Civilian Clothing, AI)"
+	name = "CIA AI (UPP Civilian Clothing, SMG, AI)"
 
 /datum/equipment_preset/cia/ai/upp_civilian/smg/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()
 
-	var/random_gun= rand(1,3)
+	var/random_gun= rand(1,10)
 	switch(random_gun)
-		if(1)
+		if(1 to 6)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39/elite, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
+		if(7 to 8)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/bizon, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon, WEAR_IN_BACK)
 
-		if(2)
+		if(9)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/pps43/extended_mag, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43/extended, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43/extended, WEAR_IN_BACK)
-		if(3)
+		if(10)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/ppsh/with_drum_mag, WEAR_J_STORE)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/ppsh/extended, WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/ppsh/extended, WEAR_IN_BACK)
 
 /datum/equipment_preset/cia/ai/operative
-	name = "CIA Agent Operative (AI)"
+	name = "CIA AI (Operative)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	rank = "Intelligence Operative"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
@@ -356,6 +363,8 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m1911/socom/equipped, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/m1911(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/m1911(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/health/ceramic_plate, WEAR_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars, WEAR_IN_BACK)
