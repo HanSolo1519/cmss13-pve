@@ -259,7 +259,7 @@
 	minimap_icon = "cia_ia"
 	idtype = /obj/item/card/id/adaptive
 
-/datum/equipment_preset/cia/analyst/load_gear(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/cia/ai/upp_civilian/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()
 
 	//Give them a random piece of civvie clothing.
