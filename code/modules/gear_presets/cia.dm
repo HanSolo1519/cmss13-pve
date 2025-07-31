@@ -262,29 +262,11 @@
 /datum/equipment_preset/cia/ai/upp_civilian/load_gear(mob/living/carbon/human/new_human, client/mob_client)
 	. = ..()
 
-	//Give them a random piece of civvie clothing.
-	var/random_outfit = pick(
-		/obj/item/clothing/under/liaison_suit/black,
-		/obj/item/clothing/under/liaison_suit/brown,
-		/obj/item/clothing/under/liaison_suit/field,
-		/obj/item/clothing/under/liaison_suit/outing,
-	)
-
-	var/random_suit = pick(
-		/obj/item/clothing/suit/storage/jacket/marine/corporate/black,
-		/obj/item/clothing/suit/storage/jacket/marine/corporate/brown,
-		/obj/item/clothing/suit/storage/jacket/marine/corporate/blue,
-		/obj/item/clothing/suit/storage/jacket/marine/bomber,
-		/obj/item/clothing/suit/storage/jacket/marine/bomber/red,
-		/obj/item/clothing/suit/storage/jacket/marine/bomber/grey,
-		/obj/item/clothing/suit/storage/jacket/marine/vest,
-		/obj/item/clothing/suit/storage/jacket/marine/vest/tan,
-		/obj/item/clothing/suit/storage/jacket/marine/vest/grey,
-	)
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/cia(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new random_outfit(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new random_suit(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/cia(new_human), WEAR_L_EAR)	
+	//uniform
+	add_civilian_uniform(new_human)
+	//jacket
+	add_civilian_jacket(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable/liaison, WEAR_BACK)
