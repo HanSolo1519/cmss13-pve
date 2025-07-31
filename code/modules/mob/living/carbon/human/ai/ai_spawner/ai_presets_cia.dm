@@ -8,7 +8,7 @@
 
 /datum/human_ai_equipment_preset/cia/undercover/smg
 	name = "CIA AI (UPP Civilian Clothing, SMG)"
-	desc = "Armed with either a PPSH, PPS43, or Bizon and a suppresed M1911, carries a simple IFAK with gauze, ointment and an injector."
+	desc = "Armed with either a M39B/2, PPSH, PPS43, or Bizon and a suppresed M1911, carries a simple IFAK with gauze, ointment and an injector."
 	path = /datum/equipment_preset/cia/ai/upp_civilian/smg
 
 /datum/human_ai_equipment_preset/cia/operative
