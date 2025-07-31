@@ -640,6 +640,8 @@
 		remove_bullet_trait("iff")
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
+/obj/item/weapon/gun/rifle/m46c/tactical
+	starting_attachment_types = list(/obj/item/attachable/lasersight, /obj/item/attachable/suppressor, /obj/item/attachable/reflex)
 //-------------------------------------------------------
 //MAR-40 AK CLONE //AK47 and FN FAL together as one.
 
